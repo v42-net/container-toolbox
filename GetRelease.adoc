@@ -3,8 +3,10 @@ Retrieves the OS release info from the specified container image:
 
 link:docker/GetRelease[`$ docker/GetRelease node:20-alpine`]
 
-[source,bash]
+[source,bash,subs=+macros]
 ----
+link:docker/GetRelease[ErrorDeviceAlreadyOwned]
+
 $ docker/GetRelease node:20-alpine
 20-alpine: Pulling from library/node
 Digest: sha256:df02558528d3d3d0d621f112e232611aecfee7cbc654f6b375765f72bb262799

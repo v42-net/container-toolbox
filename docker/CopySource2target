@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+SOURCE=
+TARGET=
+PLATFORM=
+
+if [ $# < 1 ]; then
+  echo "Usage: $(basename $0) <container-image> [<platform>]"
+  exit 1
+fi

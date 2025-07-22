@@ -2,7 +2,7 @@
 Various helper scripts for container/image management
 
 GetRelease <container-image>::
-  Retrieves the OS release info from the specified container image. For instance:
+  Retrieves the OS release info from the specified container image:
 
 [source,bash,indent=4]
 ----

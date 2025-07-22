@@ -1,3 +1,9 @@
-link:CopySource2target[`CopySource2target <container-image>`]::
-  Copy the specified container image from a source repository to a target repository. +
-  This script needs to be configured and renamed before it can be used.
+## `CopySource2target <container-image> [<platform>]`
+Copy the specified container image from a source repository to a target repository. +
+First determine the parameters to be used in this script, for instance:
+```
+SOURCE=ghcr.io/v42-net
+TARGET=v42-net.azurecr.io
+PLATFORM=linux/arm64
+```
+Rename (or copy) the script, for instance to `CopyGhcr2azure` and modify these parameters near the top of the script.

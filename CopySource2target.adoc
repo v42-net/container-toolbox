@@ -6,4 +6,30 @@ SOURCE=ghcr.io/v42-net
 TARGET=v42-net.azurecr.io
 PLATFORM=linux/arm64
 ```
-Rename (or copy) the script, for instance to `CopyGhcr2azure` and modify these parameters near the top of the script.
+Rename (or copy) link:docker/CopySource2target[`docker/CopySource2target`], for instance to 
+link:docker/CopyGhcr2azure[`docker/CopyGhcr2azure`], and modify these parameters near the top of the script.
+Now the script is ready to be used:
+
+[subs=+macros]
+----
+$ link:docker/CopyGhcr2azure[docker/CopyGhcr2azure] node:22-alpine
+22-alpine: Pulling from v42-net/node
+5dc21c4f7630: Pull complete
+c3dae0f57171: Pull complete
+bbe6674ff8c8: Pull complete
+Digest: sha256:5539840ce9d013fa13e3b9814c9353024be7ac75aca5db6d039504a56c04ea59
+Status: Downloaded newer image for node:22-alpine
+ghcr.io/v42-net/node:22-alpine
+
+i Info → Using --platform pushes only the specified platform manifest of a multi-platform image index.
+         Other components, like attestations, will not be included.
+         To push the complete multi-platform image, remove the --platform flag.
+
+The push refers to repository [v42-net.azurecr.io/node]
+5dc21c4f7630: Pushed
+6e174226ea69: Layer already exists
+bbe6674ff8c8: Pushed
+c3dae0f57171: Pushed
+22-alpine: digest: sha256:ddde8acdbc31cec9740194b86faacadc174f963c48e1f75a0c1d3918ed715aee size: 1722
+----
+

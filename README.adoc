@@ -19,3 +19,6 @@ PRETTY_NAME="Alpine Linux v3.22"
 HOME_URL="https://alpinelinux.org/"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
 ----
+
+CopySource2target <container-image>::
+  Copy the specified container image from the source repository to the target repository. +

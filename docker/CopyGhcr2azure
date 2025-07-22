@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+SOURCE=ghcr.io/v42-net
+TARGET=v42-net.azurecr.io
+PLATFORM=linux/arm64
+
+if [ $# < 1 ]; then
+  echo "Usage: $(basename $0) <container-image> [<platform>]"
+  exit 1
+fi

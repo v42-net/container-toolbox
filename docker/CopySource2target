@@ -5,7 +5,48 @@ SOURCE=
 TARGET=
 PLATFORM=
 
-if [ $# < 1 ]; then
+if [ $(basename $0) == "CopySource2target" ]; then
+  echo "Please copy/rename this script before using it"
+  exit 1
+fi
+
+if [ "$SOURCE" == "" ] && [ "$TARGET" == "" ]; then
+  echo "Please configure this script before using it"
+  exit 1
+fi
+
+if [ $# -lt 1 ]; then
   echo "Usage: $(basename $0) <container-image> [<platform>]"
   exit 1
 fi
+
+if [ $# -gt 1 ]; then
+  case $2 in
+    amd64)
+      PLATFORM=linux/amd64
+      ;;
+    arm64)
+      PLATFORM=linux/arm64
+      ;;
+    *)
+      PLATFORM=$2
+      ;;
+  esac
+fi
+
+if [ "$SOURCE" != "" ]; then
+  SOURCE=$SOURCE/
+fi
+
+if [ "$TARGET" != "" ]; then
+  TARGET=$TARGET/
+fi
+
+if [ "$PLATFORM" != "" ]; then
+  PLATFORM="--platform $PLATFORM"
+fi
+
+docker pull $PLATFORM $SOURCE$1
+docker tag $SOURCE$1 $TARGET$1
+docker push $PLATFORM $TARGET$1
+

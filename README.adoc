@@ -2,4 +2,20 @@
 Various helper scripts for container/image management
 
 GetRelease <container-image>::
-  _to be described ..._
+  Retrieves the OS release info from the specified container image. For instance:
+
+[source,bash,indent=4]
+----
+$ docker/GetRelease node:20-alpine
+20-alpine: Pulling from library/node
+Digest: sha256:df02558528d3d3d0d621f112e232611aecfee7cbc654f6b375765f72bb262799
+Status: Image is up to date for node:20-alpine
+ 
+3.22.1
+NAME="Alpine Linux"
+ID=alpine
+VERSION_ID=3.22.1
+PRETTY_NAME="Alpine Linux v3.22"
+HOME_URL="https://alpinelinux.org/"
+BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues"
+----

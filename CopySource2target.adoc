@@ -1,0 +1,3 @@
+link:CopySource2target[`CopySource2target <container-image>`]::
+  Copy the specified container image from a source repository to a target repository. +
+  This script needs to be configured and renamed before it can be used.

@@ -3,7 +3,7 @@ Various helper scripts for container/image management
 
 link:CopySource2target.adoc[`CopySource2target <container-image>`]::
   Copy the specified container image from a source repository to a target repository. +
-  This script needs to be link:CopySource2target.adoc[_configured and renamed_] before it can be used.
+  This script needs to be link:CopySource2target.adoc[_copied/renamed and configured_] before it can be used.
 
 link:GetRelease.adoc[`GetRelease <container-image>`]::
   Retrieve the OS release info from the specified container image.

@@ -1,2 +1,5 @@
 # container-toolbox
 Various helper scripts for container/image management
+
+GetRelease <container-image>::
+  _to be described ..._

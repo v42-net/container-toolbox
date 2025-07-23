@@ -15,7 +15,6 @@ PRETTY_NAME="Alpine Linux v3.22"
 HOME_URL="https://alpinelinux.org/"
 BUG_REPORT_URL="https://gitlab.alpinelinux.org/alpine/aports/-/issues" 
 ----
-
 [subs=+macros]
 ----
 $ link:kubectl/GetRelease[kubectl/GetRelease] node:18-alpine

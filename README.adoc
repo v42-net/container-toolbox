@@ -1,6 +1,7 @@
 # My container toolbox
 
-My container toolbox contains various helper scripts for container/image management.
+My helper scripts for container/image management in 
+https://www.docker.com/[Docker] and/or https://kubernetes.io/[Kubernetes] environments.
 
 link:CopySource2target.adoc[`CopySource2target <container-image>`]::
   Copy the specified container image from a source repository to a target repository. +

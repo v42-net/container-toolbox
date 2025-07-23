@@ -4,4 +4,4 @@ if [ $# != 1 ]; then
   echo "Usage: $(basename $0) <container-image>"
   exit 1
 fi
-docker run --rm -it "${1,,}" sh -c "echo;cat /etc/*release*;echo"
+docker run --pull=always --rm -it "${1,,}" sh -c "echo;cat /etc/*release*;echo"
